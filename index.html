@@ -579,7 +579,22 @@
       #projects .all-projects .project-img {
         height: 100%;
       }
+
+      .link-btn {
+        display: block;
+        margin-top: 15px;
+        font-size: 25px;
+        color: rgb(255, 6, 6);
+        text-decoration: none;
+      }
+
+      .link-btn:hover {
+        text-decoration: underline;
+        color: #ffffff;
+      }
+
     }
+
 
     /* about section */
 
@@ -760,8 +775,8 @@
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #f8f9fa;
-      
-      
+
+
     }
 
     /* Style specifically for the contact form */
@@ -813,7 +828,8 @@
       border: 1px solid #ccc;
       border-radius: 4px;
       box-sizing: border-box;
-      caret-color: auto;  /*This is used forto enable the pointer in textarea*/
+      caret-color: auto;
+      /*This is used forto enable the pointer in textarea*/
     }
 
     .form-group textarea {
@@ -843,14 +859,15 @@
       display: block;
       margin-top: 15px;
       font-size: 14px;
-      color:crimson;
+      color: crimson;
       text-decoration: none;
     }
 
     .back-btn:hover {
       text-decoration: underline;
+      color: #000000;
     }
-    
+
     /* Footer */
     #footer {
       background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
@@ -997,7 +1014,7 @@
         <div class="project-item">
           <div class="project-info">
             <h1>Project 1</h1>
-            <h2><a href="cafe.html">Cafe menu</a></h2>
+            <h2><a href="cafe.html" class="link-btn" id="link-btn">Cafe menu</a></h2>
             <p>In this project it consist of some basic coding in HTML and CSS!
               Consist of a menu of an cafe with some Prices and items!
             </p>
@@ -1009,31 +1026,53 @@
         <div class="project-item">
           <div class="project-info">
             <h1>Project 2</h1>
-            <h2><a href="https://vilashkachare19.github.io/problemsolvinglvl-0/index.html" class="link-btn">Mathematical
-                function</a></h2>
+            <h2><a href="https://vilashkachare.github.io/problemsolvinglvl-0/index.html" class="link-btn"
+                id="link-btn">Mathematical function</a></h2>
             <p>Created an Mathematicalfunctions file consist of some maths functions!</p>
           </div>
           <div class="project-img">
             <img src="assets/images/img-1.png" alt="img">
           </div>
         </div>
-        <!-- <div class="project-item">
+        <div class="project-item">
           <div class="project-info">
             <h1>Project 3</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum
-              impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque
-              libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+            <h2><a href="homepage.html" class="link-btn" id="link-btn">Hospital Management System Homepage</a></h2>
+            <p>
+              I developed a functional homepage for a Hospital Management System (HMS) using HTML and CSS.
+              The homepage includes key features such as navigation menus, a services overview, contact details, and
+              user-friendly design elements.
+              This project demonstrates my ability to create visually appealing and intuitive layouts while focusing on
+              responsive design and accessibility!
+            </p>
           </div>
           <div class="project-img">
-            <img src="assets/images/img-1.png" alt="img">
+            <img src="assets/images/hms logo.png" alt="img">
           </div>
-        </div> -->
-      </div>
-    </div>
+        </div>
+        
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 4</h1>
+            <h2>
+              <a href="https://vilashkachare.github.io/portfolio-ex/" class="link-btn" id="link-btn">
+                Basic Portfolio Page
+              </a>
+            </h2>
+            <p>
+              I designed and developed this portfolio website using HTML & CSS to showcase my skills, projects, and
+              achievements in a visually appealing way. The goal was to create a clean, modern, and user-friendly interface
+              that effectively represents my expertise in programming, web development, graphic design, and problem-solving!
+            </p>
+          </div>
+          <div class="project-img">
+            <img src="assets/images/port-ex.png" alt="img">
+          </div>
+        </div>
+        
+    
   </section>
+
   <!-- End Projects Section -->
 
   <!-- About Section -->
@@ -1065,98 +1104,99 @@
 
 
   <!-- Contact Form -->
-   <section id="contact">
-  <section class="contact-section">
-    <div class="contact-container">
-      <!-- <form   action="https://formsubmit.co/vilashkachare@gmail.com" method="post" class="contact-form" id="contactForm"  > -->
-        <form action="https://formsubmit.co/vilashkachare@gmail.com" method="post" class="contact-form" id="contactForm">
-        <h1>CONTACT <span style="color: crimson;">US</span></h1>
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" placeholder="Enter your name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email" required>
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-        </div>
-        <div class="form-group">
-          <label for="description">Description</label>
-          <textarea id="description" name="description" placeholder="Describe your query" required></textarea>
-        </div>
-        <input type="hidden" name="_subject" value="New submission from Portfolio!">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://vilashkachare19.github.io/Thankyou-page/">
+  <section id="contact">
+    <section class="contact-section">
+      <div class="contact-container">
+        <!-- <form   action="https://formsubmit.co/vilashkachare@gmail.com" method="post" class="contact-form" id="contactForm"  > -->
+        <form action="https://formsubmit.co/vilashkachare@gmail.com" method="post" class="contact-form"
+          id="contactForm">
+          <h1>CONTACT <span style="color: crimson;">US</span></h1>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" placeholder="Describe your query" required></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="New submission from Portfolio!">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://vilashkachare.github.io/Thankyou-page/">
 
 
-        <button type="submit" class="submit-btn">Submit</button>
-     
-        <a href="#hero" class="back-btn">Back to top</a>
-      
-    </div>
-  </form>
-  </section>
+          <button type="submit" class="submit-btn">Submit</button>
 
-  <!-- Footer -->
-  <section id="footer">
-    <div class="footer container">
-      <div class="brand">
-        <h1><span>V</span>ilash <span>K</span>achare</h1>
+          <a href="#hero" class="back-btn">Back to top</a>
+
       </div>
-      <h2>Your Complete Web Solution</h2>
-      <div class="social-icon">
-        <div class="social-item">
-          <a href="www.linkedin.com/in/vilash-kachare-855887244"><img src="assets/icons/linkedin.png" /></a>
-        </div>
-        <div class="social-item">
-          <a href="https://github.com/Vilashkachare19"><img src="assets/icons/github.png" /></a>
-        </div>
+      </form>
+    </section>
 
-        <div class="social-item">
-          <a href="https://www.instagram.com/vilashkachare19?igsh=dWx3aWVqYWc2ZzJx"><img
-              src="assets/icons/insta.png" /></a>
+    <!-- Footer -->
+    <section id="footer">
+      <div class="footer container">
+        <div class="brand">
+          <h1><span>V</span>ilash <span>K</span>achare</h1>
         </div>
+        <h2>Your Complete Web Solution</h2>
+        <div class="social-icon">
+          <div class="social-item">
+            <a href="www.linkedin.com/in/vilash-kachare-855887244"><img src="assets/icons/linkedin.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="https://github.com/Vilashkachare19"><img src="assets/icons/github.png" /></a>
+          </div>
+
+          <div class="social-item">
+            <a href="https://www.instagram.com/vilashkachare19?igsh=dWx3aWVqYWc2ZzJx"><img
+                src="assets/icons/insta.png" /></a>
+          </div>
+        </div>
+        <p>Copyright © 2020 Vilash. All rights reserved</p>
       </div>
-      <p>Copyright © 2020 Vilash. All rights reserved</p>
-    </div>
-  </section>
-  <!-- End Footer -->
-  <script>
+    </section>
+    <!-- End Footer -->
+    <script>
 
-    const hamburger = document.querySelector(".hamburger");
-    const mobileMenu = document.querySelector(".nav-list ul");
-    const menuItem = document.querySelectorAll(".nav-list ul li a");
-    const header = document.querySelector(".header.container");
+      const hamburger = document.querySelector(".hamburger");
+      const mobileMenu = document.querySelector(".nav-list ul");
+      const menuItem = document.querySelectorAll(".nav-list ul li a");
+      const header = document.querySelector(".header.container");
 
-    hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("active");
-      mobileMenu.classList.toggle("active");
-    });
-
-    // The classList property allows you to interact with the classes of an HTML element.
-    menuItem.forEach((item) => {
-      item.addEventListener("click", () => {
+      hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("active");
         mobileMenu.classList.toggle("active");
       });
-    });
 
-    // after hero
-    document.addEventListener("scroll", () => {
-      var scroll_position = window.scrollY;
-      if (scroll_position > 250) {
-        header.style.backgroundColor = "#29323c";
-      } else {
-        header.style.backgroundColor = "transparent";
-      }
-    });
+      // The classList property allows you to interact with the classes of an HTML element.
+      menuItem.forEach((item) => {
+        item.addEventListener("click", () => {
+          hamburger.classList.toggle("active");
+          mobileMenu.classList.toggle("active");
+        });
+      });
+
+      // after hero
+      document.addEventListener("scroll", () => {
+        var scroll_position = window.scrollY;
+        if (scroll_position > 250) {
+          header.style.backgroundColor = "#29323c";
+        } else {
+          header.style.backgroundColor = "transparent";
+        }
+      });
 
 
-  </script>
+    </script>
 </body>
 
 </html>
