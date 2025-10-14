@@ -311,6 +311,13 @@
       animation-delay: 1s;
     }
 
+    #hero h1.sub-title {
+     font-size: 2rem;      /* smaller size */
+     font-weight: 300;     /* lighter text */
+     color: white;         /* keep it visible */
+     animation: none;      /* remove reveal animation if not needed */
+    }
+
     @keyframes text-reveal {
       100% {
         color: white;
@@ -348,6 +355,7 @@
       animation-delay: 0.5s;
     }
 
+      
     @keyframes text-reveal-box {
       50% {
         width: 100%;
@@ -388,6 +396,12 @@
         font-weight: 400;
       }
     }
+    @media (max-width: 768px) {
+    #hero h1.sub-title {
+      font-size: 1.4rem;
+    }
+    }
+
 
     /* services section */
 
@@ -913,6 +927,111 @@
       color: white;
       font-size: 1.3rem;
     }
+
+
+
+    /* Floating Top Button */
+    #topBtn {
+      display: none; /* Hidden by default; shows after scroll */
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 99;
+      font-size: 20px;
+      background-color: crimson;
+      color: white;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 12px 15px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    }
+
+    #topBtn:hover {
+      background-color: #b3003b;
+      transform: scale(1.1);
+    }
+
+
+    /* ===== TECH STACK SECTION ===== */
+#techstack {
+    padding: 20px 0; /* Adjust padding as needed */
+    background-color: #f8f9fa; /* Or your desired background */
+}
+
+#techstack .techstack-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center everything horizontally */
+    text-align: center;
+}
+
+#techstack .techstack-top {
+    max-width: 350px; /* Control width of the heading and text */
+    margin-bottom: 20px;
+}
+
+#techstack .section-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+#techstack .section-title span {
+    color: crimson;
+}
+
+#techstack .techstack-top p {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-weight: 300;
+    color: #333;
+}
+
+#techstack .techstack-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px; /* Spacing between cards */
+}
+
+#techstack .tech-item {
+    padding: 20px 40px;
+    border-radius: 12px;
+    color: white;
+    background-image: linear-gradient(60deg, #E65758 0%, #771D32 100%);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+#techstack .tech-item:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+#techstack .tech-item h2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #techstack .section-title {
+        font-size: 3rem;
+    }
+    #techstack .techstack-top p {
+        font-size: 1.2rem;
+    }
+}
+
+    
   </style>
 </head>
 
@@ -951,6 +1070,7 @@
         <h1>Hello, <span></span></h1>
         <h1>My Name is <span></span></h1>
         <h1>Vilash Kachare <span></span></h1>
+        <h1 class="sub-title">Front-End Developer | Passionate About Web Experiences</h1>
         <a href="#projects" type="button" class="cta">Portfolio</a>
       </div>
     </div>
@@ -962,7 +1082,7 @@
     <div class="services container">
       <div class="service-top">
         <h1 class="section-title">Serv<span>i</span>ces</h1>
-        <p> I love creating clean, efficient, and innovative solutions that bring ideas to life. My mission is to
+        <p> I design and develop efficient, user-focused web applications that bring ideas to life. My mission is to
           enhance user experiences
           through thoughtful design and seamless functionality.!</p>
       </div>
@@ -1092,6 +1212,41 @@
 
   <!-- End Projects Section -->
 
+   <!-- Tech Stack Section -->
+<section id="techstack">
+    <div class="container">
+        <div class="techstack-content">
+            <div class="techstack-top">
+                <h1 class="section-title">Tech <span>Stack</span></h1>
+                <p>Technologies and tools I use to design and develop web applications efficiently, focusing on performance and creativity.</p>
+            </div>
+            <div class="techstack-bottom">
+                <div class="tech-item">
+                    <h2>HTML5</h2>
+                </div>
+                <div class="tech-item">
+                    <h2>CSS3</h2>
+                </div>
+                <div class="tech-item">
+                    <h2>JavaScript</h2>
+                </div>
+                <div class="tech-item">
+                    <h2>PHP</h2>
+                </div>
+                <div class="tech-item">
+                    <h2>MySQL</h2>
+                </div>
+                <div class="tech-item">
+                    <h2>VS Code</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Tech Stack Section -->
+
+
+
   <!-- About Section -->
   <section id="about">
     <div class="about container">
@@ -1152,11 +1307,14 @@
 
           <button type="submit" class="submit-btn">Submit</button>
 
-          <a href="#hero" class="back-btn">Back to top</a>
+          <!-- <a href="#hero" class="back-btn">Back to top</a> -->
+
 
       </div>
       </form>
     </section>
+        <!-- Floating Back to Top Button -->
+    <button id="topBtn" title="Back to Top">⬆️</button>
 
     <!-- Footer -->
     <section id="footer">
@@ -1188,6 +1346,7 @@
       const mobileMenu = document.querySelector(".nav-list ul");
       const menuItem = document.querySelectorAll(".nav-list ul li a");
       const header = document.querySelector(".header.container");
+      const topBtn = document.getElementById("topBtn");
 
       hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("active");
@@ -1212,6 +1371,22 @@
         }
       });
 
+        // Show button when user scrolls down 100px
+        window.onscroll = function() {
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            topBtn.style.display = "block";
+          } else {
+            topBtn.style.display = "none";
+          }
+        };
+
+        // When user clicks the button, scroll to top smoothly
+        topBtn.onclick = function() {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        };
 
     </script>
     
